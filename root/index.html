@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+  <div id="nonApplyDiv">
+  	<script type="text/javascript">
+              var http = new XMLHttpRequest();
+              http.onreadystatechange = function () {
+                if (this.readyState === 4 && this.status === 200) {
+                  window.phenom = {
+                      schema: JSON.parse(this.responseText),
+                  };
+                  var header = document.getElementsByTagName("head")[0];
+                  var node = document.createElement("script");
+                  node.type = "text/javascript";
+                  node.src = "https://dev-ng-static.phenompeople.com/CareerConnectResources/TEST/FORM_renderer.js";
+                  header.append(node);
+                }
+              };
+              http.open("GET", "https://dev-ng-static.phenompeople.com/CareerConnectResources/NONAPPLY/parsons-test/test2.json");
+              http.send();
+     </script>
+  </div>
+</body>
+</html>
