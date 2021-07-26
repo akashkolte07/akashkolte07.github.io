@@ -3,10 +3,10 @@
 <head>
 <title>Page Title</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <style>    .myDiv {    margin: 30px;    width: 50%;    display:flex;   }       </style>
+  <style>    .ph-form {    margin: 30px;    width: 50%;    display:flex;   }       </style>
 </head>
 <body>
-  <div class="myDiv" id="nonApplyDiv">
+  <div class="ph-form" id="form-container">
   	<script type="text/javascript">
               var http = new XMLHttpRequest();
               http.onreadystatechange = function () {
@@ -17,11 +17,11 @@
                   var header = document.getElementsByTagName("head")[0];
                   var node = document.createElement("script");
                   node.type = "text/javascript";
-                  node.src = "https://dev-ng-static.phenompeople.com/CareerConnectResources/TEST/applyThankYouRenderer.js"; // FORM_renderer11.js"; // test/test/FORM_renderer12.js";
+                  node.src = "https://cdn-stg-static.phenompeople.com/CareerConnectResources/COMMON/js/applyStudioBundles/nonapply/v1/nonApply_form_renderer.js"; // https://dev-ng-static.phenompeople.com/CareerConnectResources/TEST/applyThankYouRenderer.js // FORM_renderer11.js"; // test/test/FORM_renderer12.js";
                   header.append(node);
                 }
               };
-              http.open("GET", "https://dev-ng-static.phenompeople.com/CareerConnectResources/NONAPPLY/parsons-test/jtcResumeJtnBool.json");
+              http.open("GET", "https://cdn-stg-static.phenompeople.com/CareerConnectResources/NONAPPLY/PARSONS/JTC_form_schema.json"); // https://dev-ng-static.phenompeople.com/CareerConnectResources/NONAPPLY/parsons-test/jtcResumeJtnBool.json
               http.send();
      </script>
   </div>
